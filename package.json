@@ -1,0 +1,35 @@
+{
+  "name": "kds",
+  "version": "0.0.1",
+  "description": "kindle send",
+  "main": "lib/kds.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizhoukai/kds.git"
+  },
+  "keywords": [
+    "kds",
+    "kindle",
+    "kindle send"
+  ],
+  "author": {
+    "name": "余树",
+    "email": "fe.lizhoukai@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizhoukai/kds/issues"
+  },
+  "homepage": "https://github.com/lizhoukai/kds#readme",
+  "dependencies": {
+    "commander": "^4.0.1",
+    "compressing": "^1.4.0",
+    "node-json-db": "^1.0.2",
+    "nodemailer": "^6.3.1",
+    "prompts": "^2.3.0"
+  }
+}

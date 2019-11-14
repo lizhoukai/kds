@@ -1,0 +1,11 @@
+.temp/
+.rn_temp/
+node_modules/
+.DS_Store
+typings/
+.vscode/
+dist/
+typings.json
+.vscode/
+.clinic/
+lib/*.json
