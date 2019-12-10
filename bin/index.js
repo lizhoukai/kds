@@ -1,13 +1,22 @@
 #!/usr/bin/env node
+const { getDB, delDB } = require('../lib/utils')
+const DB_LEN = Object.keys(getDB()).length
 const Kds = require('../lib/kds')
-const { getDB } = require('../lib/utils')
-const kds = new Kds()
+const KDS = new Kds()
 
-//  KDS 已配置
-if (Object.keys(getDB()).length) {
+if (DB_LEN) {
   const [nodePath, filePath, params] = process.argv
   if (params) {
-    kds.handlePath(params)
+    switch (params) {
+      case 'init':
+        delDB()
+        KDS.setConf()
+        break
+      // future
+      default:
+        KDS.handlePath(params)
+        break
+    }
   } else {
     require('commander')
       .version(require('../package').version)
@@ -19,5 +28,5 @@ if (Object.keys(getDB()).length) {
       .parse(process.argv)
   }
 } else {
-  kds.setConf()
+  KDS.setConf()
 }
